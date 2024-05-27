@@ -1,6 +1,7 @@
 package database
 
 import (
+	"fmt"
 	"go-gin-backend/models"
 
 	"gorm.io/driver/mysql"
@@ -18,11 +19,15 @@ func Connect() {
 		panic("failed to connect database! ")
 	}
 
-	err = database.AutoMigrate(&models.User{}, &models.Feed{})
+	fmt.Println("Database Connected Successfully")
+
+	err = database.AutoMigrate(&models.User{}, &models.Feed{}, &models.Education{}, &models.Group{})
 
 	if err != nil {
 		panic("Failed to migrate database!")
 	}
+
+	fmt.Println("Database Migration Successfully")
 
 	DB = database
 
