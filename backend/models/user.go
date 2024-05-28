@@ -15,6 +15,6 @@ type User struct {
 	Instagram    string  `json:"instagram"`
 	Password     string  `json:"password"`
 	Feeds        []Feed  `json:"feeds" gorm:"foreignKey:UserID"`
-	Groups       []Group `json:"feeds" gorm:"foreignKey:UserID"`
+	Groups       []Group `json:"groups" gorm:"foreignKey:UserID"`
 	/*Educations   []Education `json:"educations" gorm:"foreignKey:UserId"`*/
 }

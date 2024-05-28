@@ -24,18 +24,18 @@ func SetupRouter() *gin.Engine {
 	r.DELETE("/feeds/:id", controllers.DeleteFeed)
 
 	//Education routes
-	r.POST("/education", controllers.CreateEducation)
+	r.POST("/educations", controllers.CreateEducation)
 	r.GET("/educations", controllers.GetEducations)
-	r.GET("/education/:id", controllers.GetEducation)
-	r.PUT("/education/:id", controllers.UpdateEducation)
-	r.DELETE("/education/:id", controllers.DeleteEducation)
+	r.GET("/educations/:id", controllers.GetEducation)
+	r.PUT("/educations/:id", controllers.UpdateEducation)
+	r.DELETE("/educations/:id", controllers.DeleteEducation)
 
 	//Group routes
-	r.POST("/group", controllers.CreateGroup)
+	r.POST("/groups", controllers.CreateGroup)
 	r.GET("/groups", controllers.GetGroups)
-	r.GET("/group/:id", controllers.GetGroup)
-	r.PUT("/group/:id", controllers.UpdateGroup)
-	r.DELETE("/group/:id", controllers.DeleteGroup)
+	r.GET("/groups/:id", controllers.GetGroup)
+	r.PUT("/groups/:id", controllers.UpdateGroup)
+	r.DELETE("/groups/:id", controllers.DeleteGroup)
 
 	return r
 }
